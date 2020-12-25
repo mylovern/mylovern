@@ -140,8 +140,40 @@
             }
         }
     </style>
+
+</head>
+
+<body>
+    <!-- Click the scene to reset the snow -->
+    <!-- Images from www.freepik.com -->
+    <div id="outer">
+        <div id="globe">
+            <canvas id="town"></canvas>
+            <canvas id="snowFlakes"></canvas>
+        </div>
+        <div id="tapMe">❤</div>
+        <div id="message">
+            <h2><span class="span0">Merry Christmas my lover N</span>
+                <br/>
+                <span class="span1">幺幺感谢你对我的包容与照顾</span>
+                <span class="span2">想了很久决定用歌词来表达 <br> 希望我能在婚礼上将这首歌唱给你</span>
+                <span class="span3">天佑我的爱人</span>
+                <span class="span4">给她永远笑声并常对她偏爱</span>
+                <span class="span5">天佑我的爱人</span>
+                <span class="span6">这日明天一世把她宠爱</span>
+                <span class="span7">你是我将来 不舍不弃</span>
+                <span class="span8">每一明天爱着你</span>
+                <span class="span9">爱你 幺幺</span>
+            </h2>
+        </div>
+    </div>
+    <audio autoplay="autoplay" loop id="play1">
+      <source  src="music/lover.mp3"></source>
+  </audio>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
     <script>
-        function myFunction() { //监听audio是否加载完毕，如果加载完毕，则读取audio播放时间
+        window.onload = function() {
             $('.span0').addClass('animate')
             setTimeout(() => {
                 $('.span1').addClass('animate')
@@ -171,41 +203,7 @@
             setTimeout(() => {
                 $('.span9').addClass('animate')
             }, 16000)
-
-        };
-    </script>
-</head>
-
-<body>
-    <!-- Click the scene to reset the snow -->
-    <!-- Images from www.freepik.com -->
-    <div id="outer">
-        <div id="globe">
-            <canvas id="town"></canvas>
-            <canvas id="snowFlakes"></canvas>
-        </div>
-        <div id="tapMe">❤</div>
-        <div id="message">
-            <h2><span class="span0">Merry Christmas my lover N</span>
-                <br/>
-                <span class="span1">幺幺感谢你对我的包容与照顾</span>
-                <span class="span2">想了很久决定用歌词来表达 <br> 希望我能在婚礼上将这首歌唱给你</span>
-                <span class="span3">天佑我的爱人</span>
-                <span class="span4">给她永远笑声并常对她偏爱</span>
-                <span class="span5">天佑我的爱人</span>
-                <span class="span6">这日明天一世把她宠爱</span>
-                <span class="span7">你是我将来 不舍不弃</span>
-                <span class="span8">每一明天爱着你</span>
-                <span class="span9">爱你 幺幺</span>
-            </h2>
-        </div>
-    </div>
-    <audio oncanplay="myFunction()" autoplay="autoplay" loop id="play1">
-      <source  src="music/lover.mp3"></source>
-  </audio>
-    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
-    <script>
+        }
         var canvas = document.querySelector("#town"),
             ctx = canvas.getContext('2d'),
             data, canvas2, ctx2, rafAnim = null;
