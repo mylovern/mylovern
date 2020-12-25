@@ -174,7 +174,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
     <script>
         document.onreadystatechange = function() {
+
             if (document.readyState == "complete") {
+                palyer = document.getElementById('play1')
+                palyer.play()
                 $('.span0').addClass('animate')
                 setTimeout(() => {
                     $('.span1').addClass('animate')
@@ -282,6 +285,7 @@
         function shakeGlobe() {
             window.removeEventListener("click", shakeGlobe);
             window.removeEventListener("touchstart", shakeGlobe);
+
             var globe = document.querySelector("#globe");
             TweenMax.to(canvas2, 0.5, {
                 opacity: 0
