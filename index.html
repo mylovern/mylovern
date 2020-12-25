@@ -173,42 +173,37 @@
     <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
     <script>
-        document.onreadystatechange = function() {
+        $('.span0').addClass('animate')
+        setTimeout(() => {
+            $('.span1').addClass('animate')
+        }, 100)
+        setTimeout(() => {
+            $('.span2').addClass('animate')
+        }, 2000)
+        setTimeout(() => {
+            $('.span3').addClass('animate')
+        }, 4000)
+        setTimeout(() => {
+            $('.span4').addClass('animate')
+        }, 6000)
 
-            if (document.readyState == "complete") {
-                palyer = document.getElementById('play1')
-                palyer.play()
-                $('.span0').addClass('animate')
-                setTimeout(() => {
-                    $('.span1').addClass('animate')
-                }, 100)
-                setTimeout(() => {
-                    $('.span2').addClass('animate')
-                }, 2000)
-                setTimeout(() => {
-                    $('.span3').addClass('animate')
-                }, 4000)
-                setTimeout(() => {
-                    $('.span4').addClass('animate')
-                }, 6000)
+        setTimeout(() => {
+            $('.span5').addClass('animate')
+        }, 8000)
+        setTimeout(() => {
+            $('.span6').addClass('animate')
+        }, 10000)
+        setTimeout(() => {
+            $('.span7').addClass('animate')
+        }, 12000)
+        setTimeout(() => {
+            $('.span8').addClass('animate')
+        }, 14000)
+        setTimeout(() => {
+            $('.span9').addClass('animate')
+        }, 16000)
 
-                setTimeout(() => {
-                    $('.span5').addClass('animate')
-                }, 8000)
-                setTimeout(() => {
-                    $('.span6').addClass('animate')
-                }, 10000)
-                setTimeout(() => {
-                    $('.span7').addClass('animate')
-                }, 12000)
-                setTimeout(() => {
-                    $('.span8').addClass('animate')
-                }, 14000)
-                setTimeout(() => {
-                    $('.span9').addClass('animate')
-                }, 16000)
-            }
-        }
+
 
         var canvas = document.querySelector("#town"),
             ctx = canvas.getContext('2d'),
@@ -285,7 +280,6 @@
         function shakeGlobe() {
             window.removeEventListener("click", shakeGlobe);
             window.removeEventListener("touchstart", shakeGlobe);
-
             var globe = document.querySelector("#globe");
             TweenMax.to(canvas2, 0.5, {
                 opacity: 0
