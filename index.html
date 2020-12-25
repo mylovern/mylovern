@@ -167,43 +167,46 @@
             </h2>
         </div>
     </div>
-    <audio autoplay="autoplay" loop id="play1">
+    <audio onreadystatechange="changestate()" autoplay="autoplay" loop id="play1">
       <source  src="music/lover.mp3"></source>
   </audio>
     <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
     <script>
-        window.onload = function() {
-            $('.span0').addClass('animate')
-            setTimeout(() => {
-                $('.span1').addClass('animate')
-            }, 100)
-            setTimeout(() => {
-                $('.span2').addClass('animate')
-            }, 2000)
-            setTimeout(() => {
-                $('.span3').addClass('animate')
-            }, 4000)
-            setTimeout(() => {
-                $('.span4').addClass('animate')
-            }, 6000)
+        document.onreadystatechange = function() {
+            if (document.readyState == "complete") {
+                $('.span0').addClass('animate')
+                setTimeout(() => {
+                    $('.span1').addClass('animate')
+                }, 100)
+                setTimeout(() => {
+                    $('.span2').addClass('animate')
+                }, 2000)
+                setTimeout(() => {
+                    $('.span3').addClass('animate')
+                }, 4000)
+                setTimeout(() => {
+                    $('.span4').addClass('animate')
+                }, 6000)
 
-            setTimeout(() => {
-                $('.span5').addClass('animate')
-            }, 8000)
-            setTimeout(() => {
-                $('.span6').addClass('animate')
-            }, 10000)
-            setTimeout(() => {
-                $('.span7').addClass('animate')
-            }, 12000)
-            setTimeout(() => {
-                $('.span8').addClass('animate')
-            }, 14000)
-            setTimeout(() => {
-                $('.span9').addClass('animate')
-            }, 16000)
+                setTimeout(() => {
+                    $('.span5').addClass('animate')
+                }, 8000)
+                setTimeout(() => {
+                    $('.span6').addClass('animate')
+                }, 10000)
+                setTimeout(() => {
+                    $('.span7').addClass('animate')
+                }, 12000)
+                setTimeout(() => {
+                    $('.span8').addClass('animate')
+                }, 14000)
+                setTimeout(() => {
+                    $('.span9').addClass('animate')
+                }, 16000)
+            }
         }
+
         var canvas = document.querySelector("#town"),
             ctx = canvas.getContext('2d'),
             data, canvas2, ctx2, rafAnim = null;
